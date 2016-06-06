@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -43,13 +43,22 @@
                                     <action selector="pauseButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yij-kl-JBG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSg-Ky-mcC">
+                                <rect key="frame" x="249" y="550" width="103" height="30"/>
+                                <state key="normal" title="Disable Effects"/>
+                                <connections>
+                                    <action selector="disableDecimatedTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vXQ-yZ-n1N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vSg-Ky-mcC" secondAttribute="bottom" constant="20" id="2Oy-ys-5FM"/>
                             <constraint firstItem="2si-Xz-fdv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="44" id="4j0-XI-igb"/>
                             <constraint firstAttribute="centerX" secondItem="ym2-wr-urn" secondAttribute="centerX" constant="7.5" id="IbA-ZV-9Jt"/>
                             <constraint firstAttribute="centerX" secondItem="2si-Xz-fdv" secondAttribute="centerX" constant="8" id="MbE-BU-6cq"/>
                             <constraint firstItem="pp1-t7-AbO" firstAttribute="top" secondItem="2si-Xz-fdv" secondAttribute="bottom" constant="44" id="Y7H-e4-rFh"/>
+                            <constraint firstItem="vSg-Ky-mcC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="aSC-q8-Xus"/>
                             <constraint firstItem="ym2-wr-urn" firstAttribute="top" secondItem="pp1-t7-AbO" secondAttribute="bottom" constant="44" id="hKQ-zp-8d6"/>
                             <constraint firstItem="pp1-t7-AbO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="n24-Uk-MkJ"/>
                             <constraint firstAttribute="centerX" secondItem="pp1-t7-AbO" secondAttribute="centerX" constant="8" id="npu-iH-NwZ"/>
@@ -88,12 +97,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="disableEffectsButton" destination="vSg-Ky-mcC" id="6EX-6e-6Ui"/>
                         <outlet property="pauseButton" destination="ym2-wr-urn" id="N7y-T7-P46"/>
                         <outlet property="playButton" destination="2si-Xz-fdv" id="ziP-Fg-oiW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="406" y="553"/>
         </scene>
     </scenes>
 </document>
